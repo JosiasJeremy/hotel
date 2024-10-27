@@ -1,0 +1,105 @@
+/* Estilos globales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #e5e5e5;
+}
+
+nav a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}  
+
+.left-content {
+    max-width: 60%;
+}
+
+h1 {
+    font-size: 48px;
+    color: #000;
+}
+
+p {
+    color: #555;
+    font-size: 18px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.login-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Estilo para la imagen de la derecha */
+.right-content img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Estilo del formulario de login */
+.login-container {
+    
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.login-container input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

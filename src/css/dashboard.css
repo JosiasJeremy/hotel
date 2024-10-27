@@ -1,0 +1,36 @@
+/*DASHBOARD*/
+/* Estilos para las tarjetas */
+.card {
+    color: white; /* Texto blanco para mayor contraste */
+}
+
+.card-1 {
+    background-color: #96806C !important; /* Esto forzará la aplicación de este color */
+}
+
+.card-2 {
+    background-color: #96806C!important; /* Verde */
+}
+
+.card-3 {
+    background-color: #fd7a00!important; /* Rojo */
+}
+
+.card-4 {
+    background-color: #96806C!important; /* Amarillo */
+}
+
+.card-5 {
+    background-color: #96806C!important; /* Cian */
+}
+
+.card-6 {
+    background-color: #96806C!important; /* Morado */
+}
+
+/*#GRAFICO JS*/
+#occupancyChart {
+    width: 100% !important; /* Asegúrate de que ocupe el 100% de la columna */
+    height: auto; /* Ajusta automáticamente la altura */
+    max-height: 400px; /* Establece una altura máxima si es necesario */
+}
