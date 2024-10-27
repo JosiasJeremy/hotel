@@ -27,7 +27,7 @@
     </div>
 
     <!-- Incluir Modal -->
-    <?php include '../components/modal.php'; ?>
+    <?php include '../components/clienteModal.php'; ?>
 
     <script src="../../js/modal.js"></script>
 
