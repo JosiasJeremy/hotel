@@ -22,7 +22,7 @@
         <div class="  my-6"></div>
 
         <!-- Incluir Tabla -->
-        <?php include '../components/cliente.php'; ?>
+        <?php include '../components/gestionarCliente.php'; ?>
         
     </div>
 

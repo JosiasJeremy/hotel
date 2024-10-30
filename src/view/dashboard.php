@@ -4,80 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <!-- Bootstrap CSS -->
+    <!-- Tailwind CSS y Font Awesome -->
     <link rel="icon" href="assets/img/star.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="../css/dashboard.css"> <!-- Enlace al CSS externo -->
+    <link rel="stylesheet" href="../css/dashboard.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body class="bg-teal-500">
+<body class="bg-gray-100">
 
-        <!--Incluye el archivo de inicio -->
-        <?php include 'menu.php'; ?>  
+    <!-- Incluye el menú -->
+    <?php include 'menu.php'; ?>  
 
     <div class="container mx-auto p-6">
-
-        <!-- Incluir Encabezado -->
+        <!-- Incluye el encabezado -->
         <?php include '../components/header.php'; ?>
     
-        <div class="grid grid-cols-4 gap-6 my-6 text-center">
-            <!-- Tarjetas (cards) -->
-            <div class="bg-cyan-400 p-4 rounded-lg h-60 flex flex-col justify-between">  <!-- Padding en los lados -->
-                <div class="card card-1">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Habitaciónes Disponibles</h5>
-                        <img src="../assets/habitacion.png" alt="Estándar" class="w-25 h-24 mx-auto">
-                        <p class="card-text">0</p>
-                    </div>
-                </div>
+        <!-- Tarjetas de información -->
+        <div class="grid grid-cols-3 gap-6 my-6">
+            <!-- Tarjeta de Habitaciones Disponibles -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center transition-transform transform hover:scale-105">
+                <h5 class="text-xl font-bold mb-4 text-gray-800">Habitaciones Disponibles</h5>
+                <img src="../assets/habitacion.png" alt="Habitación" class="w-20 h-20 mb-4 rounded-full shadow-md">
+                <p class="text-3xl font-semibold text-gray-600">0</p>
             </div>
-            <div class="bg-cyan-400 p-4 rounded-lg h-60 flex flex-col justify-between">  <!-- Padding en los lados -->
-                <div class="card card-3">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Clientes</h5>
-                        <img src="../assets/clientes.png" alt="Estándar" class="w-25 h-24 mx-auto">
-                        <p class="card-text">2</p>
-                    </div>
-                </div>
+
+            <!-- Tarjeta de Clientes -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center transition-transform transform hover:scale-105">
+                <h5 class="text-xl font-bold mb-4 text-gray-800">Clientes</h5>
+                <img src="../assets/clientes.png" alt="Clientes" class="w-20 h-20 mb-4 rounded-full shadow-md">
+                <p class="text-3xl font-semibold text-gray-600">2</p>
             </div>
-            <div class="bg-cyan-400 p-4 rounded-lg h-60 flex flex-col justify-between">  <!-- Padding en los lados -->
-                <div class="card card-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Reservas</h5>
-                        <img src="../assets/reserva.png" alt="Estándar" class="w-25 h-24 mx-auto">
-                        <p class="card-text">3</p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-cyan-400 p-4 rounded-lg h-60 flex flex-col justify-between">  <!-- Padding en los lados -->
-                <div class="card card-4">
-                    <div class="card-body text-center">
-                        <h5 class="card-title">Cochera</h5>
-                        <img src="../assets/cochera.png" alt="Estándar" class="w-25 h-24 mx-auto">
-                        <p class="card-text">3</p>
-                    </div>
-                </div>
+
+            <!-- Tarjeta de Reservas -->
+            <div class="bg-white shadow-lg rounded-lg p-6 flex flex-col items-center transition-transform transform hover:scale-105">
+                <h5 class="text-xl font-bold mb-4 text-gray-800">Reservas</h5>
+                <img src="../assets/reserva.png" alt="Reservas" class="w-20 h-20 mb-4 rounded-full shadow-md">
+                <p class="text-3xl font-semibold text-gray-600">3</p>
             </div>
         </div>
         
-
-        <!-- Sección del gráfico -->
-        <div class="grid grid-cols-2 gap-6 my-6 text-center"> <!-- Cambia justify-content-center por justify-content-start -->
-            <div class="col-md-6"> <!-- Cambia col-md-8 por col-md-6 para que ocupe menos espacio -->
-                <canvas id="occupancyChart" width="400" height="400"></canvas>
+        <!-- Sección de gráficos -->
+        <div class="grid grid-cols-2 gap-6 my-6">
+            <!-- Gráfico de barras de ocupación -->
+            <div class="bg-white shadow-lg rounded-lg p-4" style="height: 400px; display: flex; align-items: center; justify-content: center;">
+                <canvas id="occupancyChart" class="w-full h-full"></canvas>
             </div>
-            <div class="col-md-6">
-                <canvas id="pieChart" width="300" height="300"></canvas>
+
+            <!-- Gráfico de pastel de estado de habitaciones -->
+            <div class="bg-white shadow-lg rounded-lg p-4" style="height: 400px; display: flex; align-items: center; justify-content: center;">
+                <canvas id="pieChart" class="w-full h-full"></canvas>
             </div>
         </div>
     </div>
 
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Script para el gráfico -->
-    <script src="../../js/dashgraf.js"></script>  <!-- Enlace al archivo del gráfico -->
+    <!-- Scripts -->
+    <script src="../../js/dashgraf.js"></script>
 </body>
 </html>

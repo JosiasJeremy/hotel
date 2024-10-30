@@ -49,5 +49,12 @@
                 <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded-md">Guardar</button>
             </div>
         </form>
+            <div id="delete-confirmation" class="hidden">
+                <p>¿Está seguro que desea eliminar este registro?</p>
+                <div class="flex justify-end mt-4 space-x-2">
+                    <button onclick="closeModal()" class="bg-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-400">Cancelar</button>
+                    <button class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-700">Eliminar</button>
+                </div>
+            </div>
     </div>
 </div>
